@@ -1,6 +1,6 @@
 [project]
 name = "on-on"
-version = "0.1.6"
+version = "0.1.7"
 authors = [
   { name="ahmetcanisik", email="imcanisik@gmail.com" },
 ]
@@ -15,11 +15,11 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/OkuldaOgrenilen/oo"
-Issues = "https://github.com/pypa/OkuldaOgrenilen/oo/issues"
+Homepage = "https://github.com/ogrenilen/on-on"
+Issues = "https://github.com/pypa/ogrenilen/on-on/issues"
 
 [project.scripts]
-oo = "cli.main:exec"  # Doğru modül yolu
+oo = "cli.main:exec"
 
 [build-system]
 requires = ["setuptools>=61.0"]

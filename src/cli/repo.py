@@ -1,25 +1,20 @@
-from typing_extensions import Optional
 from requests import post as request
 from os import getenv
 from cli.runcmd import runcmd
 
 GITHUB_API_URL = "https://api.github.com"
-TOKEN = getenv("github_okuldaogrenilen_token")
-
-# öncelikle bir github deposu oluşturulacak.
-
-# oluşturulan bu github deposunu, yeni oluşturulan klasör içerisine init edecem.
+TOKEN = getenv("github_ogrenilen_token")
 
 class repository:
     def __init__(self):
         pass
 
     @staticmethod
-    def create(repo_name: str, private: bool = False):
+    def create(repo_name: str, token: str = TOKEN, private: bool = False):
         url = f"{GITHUB_API_URL}/user/repos"
         
         headers = {
-            "Authorization": f"token {TOKEN}",
+            "Authorization": f"token {token if token != None else TOKEN}",
             "Accept": "application/vnd.github.v3+json"
         }
         
